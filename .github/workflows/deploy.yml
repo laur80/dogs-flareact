@@ -11,6 +11,7 @@ jobs:
           node-version: 12
       - run: npm install
       - run: npm build
+      - run: npm deploy
       - name: Publish
         uses: cloudflare/wrangler-action@1.2.0
         with:
