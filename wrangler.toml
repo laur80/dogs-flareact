@@ -1,4 +1,4 @@
-name = "my-project"
+name = "dogs-flareact"
 type = "webpack"
 account_id = "a72c7b16a46baf2305845d370c105bcd"
 workers_dev = true
