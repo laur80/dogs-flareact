@@ -1,7 +1,7 @@
-import '../styles.css';
+// import '../styles.css';
 import Link from 'flareact/link';
 // import Image from 'next/image';
-// import Navbar from '../compo/Navbar';
+import Navbar from '../compo/Navbar';
 import Head from 'flareact/head';
 import { useState } from 'react';
 // import dh from '../public/dh.jpg';
@@ -67,7 +67,7 @@ function DogList({ dogs }) {
 				/>
 				<meta name='description' content='Find the right dog for you' />
 			</Head>
-
+			<Navbar dogs={dogs} />
 			<div className='container'>
 				<div className='DogList'>
 					<h1 className='display-1 text-center mt-3 mb-5 ' id='txt'>
@@ -82,6 +82,7 @@ function DogList({ dogs }) {
 									{/* <Link href='/[slug]' as={`/${d.name}`}>
 										<a className='underline'>{d.name}</a>
 									</Link> */}
+									<div>{d.name}</div>
 								</h3>
 							</div>
 						))}
