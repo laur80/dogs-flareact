@@ -79,10 +79,10 @@ function DogList({ dogs }) {
 								<img className='image' alt={d.name} src={d.src} />
 
 								<h3 className='mt-3'>
-									{/* <Link href='/[slug]' as={`/${d.name}`}>
+									<Link href='/[slug]' as={`/${d.name}`}>
 										<a className='underline'>{d.name}</a>
-									</Link> */}
-									<div>{d.name}</div>
+									</Link>
+									{/* <div>{d.name}</div> */}
 								</h3>
 							</div>
 						))}

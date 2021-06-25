@@ -5,10 +5,9 @@ import Head from 'flareact/head';
 function Navbar({ dogs, title, keywords, description, children }) {
 	const dogLinks = dogs.map((dog) => (
 		<li className='nav-item' key={dog.name}>
-			{/* <Link  href='/[slug]' as={`/${dog.name}`}>
+			<Link href='/[slug]' as={`/${dog.name}`}>
 				<a className='nav-link'>{dog.name}</a>
-			</Link> */}
-			<div>{dog.name}</div>
+			</Link>
 		</li>
 	));
 	// console.log('nav', dogs);
