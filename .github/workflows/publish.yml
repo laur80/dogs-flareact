@@ -1,19 +1,27 @@
-name: Deploy
+name: Publish
+
 on:
   - push
+
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
         with:
           node-version: 12
-      - run: npm install
-      - run: npm build
-        uses: cloudflare/wrangler-action@1.2.0
-        with:
-          apiToken: ${{ secrets.CF_API_TOKEN }}
+      - run: yarn --pure-lockfile
+      - run: yarn test
+
+  publish-npm:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Semantic Release
+        uses: cycjimmy/semantic-release-action@v2
         env:
-          CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
-          IS_WORKER: true
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
