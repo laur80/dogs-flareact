@@ -3,7 +3,7 @@ import Link from 'flareact/link';
 // import Navbar from '../compo/Navbar';
 import Head from 'flareact/head';
 import { useState } from 'react';
-import Navbar from '../compo/Navbar';
+import Navbar from '../../compo/Navbar';
 // import hazel from '../public/hazel.jpg';
 // import tubby from '../public/tubby.jpg';
 // import whiskey from '../public/whiskey.jpg';
@@ -91,7 +91,7 @@ export default function DogDetails({ dog }) {
 							{details}
 							<ul className='list-group list-group-flush'></ul>
 							<div className='card-body'>
-								<Link href='/'>
+								<Link href='/public'>
 									<a className='btn btn-info'>Go Back</a>
 								</Link>
 							</div>

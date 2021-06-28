@@ -79,19 +79,19 @@ code {
 	size: 96px;
 }
 
-/* .image {
+/* .dogs-img {
 	width: 200px !important;
 	height: 200px !important;
 	background: none !important;
 } */
-.Dog .image {
-	width: 65% !important;
+.Dog .dogs-img {
+	width: 75%;
 	/* filter: grayscale(); */
 	border-radius: 50%;
 	box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.1);
 	transition: 0.4s filter ease;
 }
-.Dog:hover .image {
+.Dog:hover .dogs-img {
 	filter: none;
 }
 
