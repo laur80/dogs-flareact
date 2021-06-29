@@ -1,7 +1,11 @@
+import { useRouter } from 'flareact/router';
+import { useEffect } from 'react';
+
 export default function Index() {
-  return (
-    <h1>
-      You're running React on the Edge!
-    </h1>
-  );
+	const router = useRouter();
+	useEffect(() => {
+		router.push('/public', '/public');
+	}, []);
+
+	return <h1>...loading</h1>;
 }
