@@ -91,7 +91,7 @@ export default function DogDetails({ dog }) {
 							{details}
 							<ul className='list-group list-group-flush'></ul>
 							<div className='card-body'>
-								<Link href='/public'>
+								<Link href='/'>
 									<a className='btn btn-info'>Go Back</a>
 								</Link>
 							</div>
